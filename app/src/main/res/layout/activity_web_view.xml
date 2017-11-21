@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_web_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.nextinnovation.pt.barcodescanner.WebViewActivity">
+
+    <WebView  xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/google_webview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        />
+       <Button
+           android:id="@+id/btnRetry"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_centerInParent="true"
+           android:text="Retry"
+           android:visibility="invisible"/>
+</RelativeLayout>

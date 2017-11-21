@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Barcode Reader</string>
+    <string name="dialog_title_licenses">License</string>
+    <string name="license_title_developer">Piash Sarker</string>
+    <string name="license_developer_email">sarkerpt@gmail.com</string>
+    <string name="license_developer_phone">+8801683193505</string>
+    <string name="share">Share</string>
+    <string name="rate_app">Rate This App</string>
+    <string name="bug">Submit Bug</string>
+    <string name="license">License</string>
+    <string name="user_cancelled">User Cancel Permission</string>
+    <string name="banner_add_unit_id">ca-app-pub-1714609736931391/8247106060</string>
+    <string name="license_title_company">Company Information</string>
+    <string name="license_company">Next Innovation Soft</string>
+    <string name="license_company_website">www.nextinnovationsoft.com</string>
+    <string name="license_title_dev">Developer Information</string>
+    <string name="message">text</string>
+    <string name="dialog_title">Scan Code</string>
+    <string name="exit_title">Exit</string>
+    <string name="ok">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok_title">Ok</string>
+</resources>
