@@ -1,8 +1,10 @@
-package com.nextinnovation.pt.barcodescanner;
+package com.nextinnovation.pt.barcodescanner.activity;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+
+import com.nextinnovation.pt.barcodescanner.R;
 
 public class SplashActivity extends Activity {
 

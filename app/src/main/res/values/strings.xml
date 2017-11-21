@@ -15,9 +15,16 @@
     <string name="license_company_website">www.nextinnovationsoft.com</string>
     <string name="license_title_dev">Developer Information</string>
     <string name="message">text</string>
-    <string name="dialog_title">Scan Code</string>
+    <string name="dialog_title">Scan Code Result</string>
     <string name="exit_title">Exit</string>
     <string name="ok">Save</string>
     <string name="cancel">Cancel</string>
     <string name="ok_title">Ok</string>
+    <string name="empty_barcode">Scan your first Barcode or QR Code to see the list.</string>
+    <string name="scan_your_first">Scan your first Barcode or QR Code to see the information here.</string>]
+    <string name="camera_permission_granted">Camera Permission Granted.</string>
+    <string name="camera_permission_request">Camera permission is required for Barcode Scanning.</string>
+    <string name="thanks_for_permission">Thanks for your permission.</string>
+    <string name="sorry_for_not_permission">Sorry , We are not able to scan Barcode without your permission.</string>
+    <string name="swipe">Swipe Down To Refresh</string>
 </resources>

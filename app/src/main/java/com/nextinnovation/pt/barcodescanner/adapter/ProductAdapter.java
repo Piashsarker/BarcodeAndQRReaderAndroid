@@ -9,9 +9,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.nextinnovation.pt.barcodescanner.ClipBoardManager;
+import com.nextinnovation.pt.barcodescanner.utils.ClipBoardManager;
 import com.nextinnovation.pt.barcodescanner.R;
-import com.nextinnovation.pt.barcodescanner.WebViewActivity;
+import com.nextinnovation.pt.barcodescanner.activity.WebViewActivity;
 import com.nextinnovation.pt.barcodescanner.database.DatabaseHelper;
 import com.nextinnovation.pt.barcodescanner.model.Product;
 
@@ -64,7 +64,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
     }
     public void addNewPrdouct( Product product){
         DatabaseHelper helper = new DatabaseHelper(context);
-        helper.addEmployee(product);
+        helper.addProduct(product);
         notifyDataSetChanged();
     }
 

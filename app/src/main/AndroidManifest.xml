@@ -2,8 +2,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nextinnovation.pt.barcodescanner">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.CAMERA" />
 
     <application
         android:allowBackup="true"
@@ -12,7 +15,7 @@
         android:supportsRtl="true"
         android:theme="@style/MyMaterialTheme">
         <activity
-            android:name="com.nextinnovation.pt.barcodescanner.SplashActivity"
+            android:name="com.nextinnovation.pt.barcodescanner.activity.SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,14 +23,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.nextinnovation.pt.barcodescanner.MainActivity" />
+        <activity android:name="com.nextinnovation.pt.barcodescanner.activity.MainActivity" />
         <activity
-            android:name="com.nextinnovation.pt.barcodescanner.WebViewActivity"
+            android:name="com.nextinnovation.pt.barcodescanner.activity.WebViewActivity"
             android:theme="@style/WebActivityTheme"
             android:label="Barcode Search">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.nextinnovation.pt.barcodescanner.MainActivity" />
+                android:value="com.nextinnovation.pt.barcodescanner.activity.MainActivity" />
         </activity>
     </application>
 

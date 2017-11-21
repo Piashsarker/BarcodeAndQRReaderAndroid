@@ -11,14 +11,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/adView"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            ads:adSize="BANNER"
-            ads:adUnitId="@string/banner_add_unit_id">
-        </com.google.android.gms.ads.AdView>
 
         <Button
             android:id="@+id/btnScan"
@@ -33,17 +25,6 @@
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true" />
 
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/adView2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            ads:adSize="BANNER"
-            ads:adUnitId="@string/banner_add_unit_id"
-            android:layout_above="@+id/btnScan"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:layout_marginBottom="62dp">
-        </com.google.android.gms.ads.AdView>
 
     </RelativeLayout>
 

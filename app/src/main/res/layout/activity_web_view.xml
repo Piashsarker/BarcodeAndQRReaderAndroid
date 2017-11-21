@@ -4,7 +4,7 @@
     android:id="@+id/activity_web_view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.nextinnovation.pt.barcodescanner.WebViewActivity">
+    tools:context="com.nextinnovation.pt.barcodescanner.activity.WebViewActivity">
 
     <WebView  xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/google_webview"

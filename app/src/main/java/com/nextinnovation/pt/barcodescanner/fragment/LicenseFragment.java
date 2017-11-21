@@ -1,4 +1,4 @@
-package com.nextinnovation.pt.barcodescanner;
+package com.nextinnovation.pt.barcodescanner.fragment;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -7,6 +7,8 @@ import android.support.annotation.NonNull;
 import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
+
+import com.nextinnovation.pt.barcodescanner.R;
 
 
 public class LicenseFragment extends DialogFragment {

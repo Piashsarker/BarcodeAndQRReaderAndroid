@@ -1,4 +1,4 @@
-package com.nextinnovation.pt.barcodescanner;
+package com.nextinnovation.pt.barcodescanner.utils;
 
 import android.annotation.SuppressLint;
 import android.content.ClipData;
@@ -9,6 +9,8 @@ import android.content.Intent;
 import android.content.res.AssetFileDescriptor;
 import android.net.Uri;
 import android.util.Log;
+
+import com.nextinnovation.pt.barcodescanner.R;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;

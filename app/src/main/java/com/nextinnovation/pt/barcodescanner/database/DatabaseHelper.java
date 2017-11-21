@@ -48,20 +48,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     }
 
-    public void addEmployee(Product instructor) {
+    public void addProduct(Product product) {
         SQLiteDatabase db = this.getReadableDatabase();
         ContentValues values = new ContentValues();
-        values.put("product_code", instructor.getProductBarcodeNo());
-        values.put("scan_time", instructor.getScanTime());
-        values.put("scan_date", instructor.getScanDate());
+        values.put("product_code", product.getProductBarcodeNo());
+        values.put("scan_time", product.getScanTime());
+        values.put("scan_date", product.getScanDate());
         db.insert(TABLE_PRODUCT, null, values);
         db.close();
 
     }
 
 
-    public ArrayList<Product> getAllEmployee() {
-        ArrayList<Product> instructorList = new ArrayList<Product>();
+    public ArrayList<Product> getAllProduct() {
+        ArrayList<Product> productArrayList = new ArrayList<Product>();
         // Select All Query
         String selectQuery = "SELECT  * FROM " + TABLE_PRODUCT+" ORDER BY id DESC";
 
@@ -71,20 +71,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         // looping through all rows and adding to list
         if (cursor.moveToFirst()) {
             do {
-                Product employee = new Product();
-                employee.setProductNo(cursor.getString(0));
-                employee.setProductBarcodeNo(cursor.getString(1));
-                employee.setScanTime(cursor.getString(2));
-                employee.setScanDate(cursor.getString(3));
+                Product product = new Product();
+                product.setProductNo(cursor.getString(0));
+                product.setProductBarcodeNo(cursor.getString(1));
+                product.setScanTime(cursor.getString(2));
+                product.setScanDate(cursor.getString(3));
 
 
                 // Adding contact to list
-                instructorList.add(employee);
+                productArrayList.add(product);
             } while (cursor.moveToNext());
         }
 
         // return contact list
-        return instructorList;
+        return productArrayList;
     }
 
 

@@ -1,8 +1,9 @@
-package com.nextinnovation.pt.barcodescanner;
+package com.nextinnovation.pt.barcodescanner.activity;
 
 import android.content.Context;
 import android.content.Intent;
 import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -10,6 +11,8 @@ import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.Toast;
+
+import com.nextinnovation.pt.barcodescanner.R;
 
 public class WebViewActivity extends AppCompatActivity {
     Button btnRetry ;
@@ -36,7 +39,7 @@ public class WebViewActivity extends AppCompatActivity {
     }
 
     private void loadWebView(String barCode) {
-        if(isNetworkConnected()){
+        if(isNetworkAvailable(this)){
             btnRetry.setVisibility(View.INVISIBLE);
             WebView myWebView = (WebView)findViewById(R.id.google_webview);
             myWebView.setWebViewClient(new WebViewClient());
@@ -51,12 +54,13 @@ public class WebViewActivity extends AppCompatActivity {
 
 
     }
+    public static boolean isNetworkAvailable(Context context) {
 
-    private boolean isNetworkConnected() {
-        ConnectivityManager cm = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
-
-        return cm.getActiveNetworkInfo() != null;
+        ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
+
 
 
 }
