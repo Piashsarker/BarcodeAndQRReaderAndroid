@@ -1,4 +1,9 @@
 apply plugin: 'com.android.application'
+apply plugin: 'io.fabric'
+
+repositories {
+    maven { url 'https://maven.fabric.io/public' }
+}
 
 android {
     compileSdkVersion 26
@@ -30,4 +35,7 @@ dependencies {
     compile 'com.android.support:design:26.0.2'
     compile 'com.edwardvanraak:MaterialBarcodeScanner:0.0.6-ALPHA'
     testCompile 'junit:junit:4.12'
+    compile('com.crashlytics.sdk.android:crashlytics:2.7.1@aar') {
+        transitive = true;
+    }
 }

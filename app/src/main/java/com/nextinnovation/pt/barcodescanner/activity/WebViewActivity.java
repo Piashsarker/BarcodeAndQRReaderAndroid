@@ -23,6 +23,8 @@ public class WebViewActivity extends AppCompatActivity {
         setContentView(R.layout.activity_web_view);
         btnRetry = (Button) findViewById(R.id.btnRetry);
 
+
+
         Intent intent = getIntent();
         if(intent.getExtras()!=null){
             barCode= intent.getStringExtra("product_id");
