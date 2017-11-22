@@ -19,6 +19,7 @@
             android:id="@+id/product_code"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="20dp"
             android:layout_gravity="center"
             android:text="9879878978"
             android:textSize="30sp" />
