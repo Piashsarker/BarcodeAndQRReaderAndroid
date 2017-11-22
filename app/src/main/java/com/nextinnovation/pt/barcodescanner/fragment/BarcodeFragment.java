@@ -9,6 +9,8 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.nextinnovation.pt.barcodescanner.R;
 
 /**
@@ -44,6 +46,14 @@ public class BarcodeFragment extends Fragment implements View.OnClickListener {
         super.onViewCreated(view, savedInstanceState);
         btnScan = (Button) view.findViewById(R.id.btnScan);
         btnScan.setOnClickListener(this);
+        loadAdd(view);
+
+    }
+
+    private void loadAdd(View view) {
+        AdView mAdView = view.findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
     }
     @Override
@@ -58,8 +68,6 @@ public class BarcodeFragment extends Fragment implements View.OnClickListener {
         }
 
     }
-
-
 
 
     @Override

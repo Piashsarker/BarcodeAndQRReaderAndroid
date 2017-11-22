@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
 import com.nextinnovation.pt.barcodescanner.R;
+import com.nextinnovation.pt.barcodescanner.activity.MainActivity;
 import com.nextinnovation.pt.barcodescanner.adapter.ProductAdapter;
 import com.nextinnovation.pt.barcodescanner.database.DatabaseHelper;
 import com.nextinnovation.pt.barcodescanner.model.Product;
@@ -23,7 +24,7 @@ import java.util.ArrayList;
  * Created by PT on 2/9/2017.
  */
 
-public class ProductListFragment extends Fragment {
+public class ProductListFragment extends Fragment implements MainActivity.ItemScanned {
 
     private RecyclerView mRecyclerView;
     private ProductAdapter mAdapter;
@@ -55,6 +56,8 @@ public class ProductListFragment extends Fragment {
                 loadProductList();
             }
         });
+
+
         loadProductList();
         return view;
     }
@@ -83,4 +86,8 @@ public class ProductListFragment extends Fragment {
         loadProductList();
     }
 
+    @Override
+    public void itemUpdated() {
+        loadProductList();
+    }
 }

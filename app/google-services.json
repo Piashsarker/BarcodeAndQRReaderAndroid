@@ -1,35 +1,35 @@
 {
   "project_info": {
-    "project_number": "822448537489",
-    "firebase_url": "https://barcodereaderforplaystore.firebaseio.com",
-    "project_id": "barcodereaderforplaystore",
-    "storage_bucket": "barcodereaderforplaystore.appspot.com"
+    "project_number": "54135562732",
+    "firebase_url": "https://publishedappsplay.firebaseio.com",
+    "project_id": "publishedappsplay",
+    "storage_bucket": "publishedappsplay.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:822448537489:android:11928de6bf768bd2",
+        "mobilesdk_app_id": "1:54135562732:android:dd94de8c2fb5d640",
         "android_client_info": {
-          "package_name": "com.example.pt.barcodereaderforplaystore"
+          "package_name": "com.nextinnovation.pt.barcodescanner"
         }
       },
       "oauth_client": [
         {
-          "client_id": "822448537489-d0ntth7ko0gh3qgv9ne6ktusqbmgecin.apps.googleusercontent.com",
+          "client_id": "54135562732-lgmk1l24ceq7qi4kicr7in3siee7537m.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "com.example.pt.barcodereaderforplaystore",
-            "certificate_hash": "08F78D67B3BA1C40B9FEB0FA1514134D74204639"
+            "package_name": "com.nextinnovation.pt.barcodescanner",
+            "certificate_hash": "44fe06ab8398f0835871e42ec35418f40a4fbc9e"
           }
         },
         {
-          "client_id": "822448537489-279mfi56se9485e1rp1psrj86nivrc0n.apps.googleusercontent.com",
+          "client_id": "54135562732-cjohia0msut8qrisfuh0ta707bulfki2.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCeO10tj1Lth5sImTXOnkslhOq0U4Z8va4"
+          "current_key": "AIzaSyCrkEgM5RYDCegLKzrR9N4nfnGoMELbdFw"
         }
       ],
       "services": {
@@ -40,7 +40,7 @@
           "status": 2,
           "other_platform_oauth_client": [
             {
-              "client_id": "822448537489-279mfi56se9485e1rp1psrj86nivrc0n.apps.googleusercontent.com",
+              "client_id": "54135562732-cjohia0msut8qrisfuh0ta707bulfki2.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

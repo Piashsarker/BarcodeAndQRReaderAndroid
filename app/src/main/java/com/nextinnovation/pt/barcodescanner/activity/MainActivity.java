@@ -53,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements BarcodeFragment.S
     private Barcode barcodeResult;
     private final String TAG = MainActivity.class.getSimpleName() ;
     private final int MY_PERMISSION_REQUEST_CAMERA = 1001;
+    private ItemScanned itemScanned ;
 
 
 
@@ -63,22 +64,21 @@ public class MainActivity extends AppCompatActivity implements BarcodeFragment.S
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         context = this;
-
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         viewPager = (ViewPager) findViewById(R.id.viewpager);
         setupViewPager(viewPager);
-
         tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 
-        if(savedInstanceState != null){
-            Barcode restoredBarcode = savedInstanceState.getParcelable(BARCODE_KEY);
-            if(restoredBarcode != null){
-                barcodeResult = restoredBarcode;
-            }
-        }
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+
+    }
+
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
@@ -305,5 +305,9 @@ public class MainActivity extends AppCompatActivity implements BarcodeFragment.S
 
     }
 
+
+    public interface  ItemScanned{
+        void itemUpdated();
+    }
 
 }

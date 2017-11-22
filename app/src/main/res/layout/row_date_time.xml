@@ -15,8 +15,6 @@
         <TextView android:id="@+id/current_time"
             style="@style/Material_Action"
             android:textAlignment="center"
-            android:textColor="#FFF"
-            android:background="@color/colorPrimaryDark"
             tools:text="7.80 AM"/>
     </android.support.v7.widget.CardView>
 
@@ -29,8 +27,6 @@
         <TextView android:id="@+id/current_date"
             style="@style/Material_Action"
             android:textAlignment="center"
-            android:textColor="#FFF"
-            android:background="@color/colorPrimaryDark"
             android:gravity="left"
             tools:text="12/12/2017"/>
     </android.support.v7.widget.CardView>

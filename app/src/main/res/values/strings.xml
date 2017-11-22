@@ -27,4 +27,6 @@
     <string name="thanks_for_permission">Thanks for your permission.</string>
     <string name="sorry_for_not_permission">Sorry , We are not able to scan Barcode without your permission.</string>
     <string name="swipe">Swipe Down To Refresh</string>
+    <string name="app_ad_id">ca-app-pub-2932652588490084~5264077465</string>
+    <string name="ad_unit_id">ca-app-pub-2932652588490084/2711610908</string>
 </resources>

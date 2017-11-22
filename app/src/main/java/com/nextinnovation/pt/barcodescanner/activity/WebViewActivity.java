@@ -12,6 +12,8 @@ import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 import com.nextinnovation.pt.barcodescanner.R;
 
 public class WebViewActivity extends AppCompatActivity {
@@ -22,8 +24,7 @@ public class WebViewActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_view);
         btnRetry = (Button) findViewById(R.id.btnRetry);
-
-
+        loadAdd();
 
         Intent intent = getIntent();
         if(intent.getExtras()!=null){
@@ -39,6 +40,14 @@ public class WebViewActivity extends AppCompatActivity {
         });
 
     }
+
+    private void loadAdd() {
+         AdView mAdView = findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
+
+    }
+
 
     private void loadWebView(String barCode) {
         if(isNetworkAvailable(this)){
