@@ -60,8 +60,8 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
 
-    public ArrayList<Product> getAllProduct() {
-        ArrayList<Product> productArrayList = new ArrayList<Product>();
+    public ArrayList<Object> getAllProduct() {
+        ArrayList<Object> productArrayList = new ArrayList<Object>();
         // Select All Query
         String selectQuery = "SELECT  * FROM " + TABLE_PRODUCT+" ORDER BY id DESC";
 
@@ -76,8 +76,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 product.setProductBarcodeNo(cursor.getString(1));
                 product.setScanTime(cursor.getString(2));
                 product.setScanDate(cursor.getString(3));
-
-
                 // Adding contact to list
                 productArrayList.add(product);
             } while (cursor.moveToNext());

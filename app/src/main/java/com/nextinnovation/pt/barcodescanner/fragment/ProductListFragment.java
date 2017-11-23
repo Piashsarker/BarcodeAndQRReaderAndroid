@@ -12,11 +12,13 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdSize;
+import com.google.android.gms.ads.NativeExpressAdView;
 import com.nextinnovation.pt.barcodescanner.R;
 import com.nextinnovation.pt.barcodescanner.activity.MainActivity;
 import com.nextinnovation.pt.barcodescanner.adapter.ProductAdapter;
 import com.nextinnovation.pt.barcodescanner.database.DatabaseHelper;
-import com.nextinnovation.pt.barcodescanner.model.Product;
 
 import java.util.ArrayList;
 
@@ -29,7 +31,7 @@ public class ProductListFragment extends Fragment implements MainActivity.ItemSc
     private RecyclerView mRecyclerView;
     private ProductAdapter mAdapter;
     private SwipeRefreshLayout swipeRefresh;
-    ArrayList<Product> productArrayList;
+    ArrayList<Object> productArrayList;
     private RelativeLayout mainLayout , emptyLayout ;
     DatabaseHelper db ;
     public ProductListFragment(){
@@ -65,6 +67,7 @@ public class ProductListFragment extends Fragment implements MainActivity.ItemSc
     private void loadProductList() {
         db= new DatabaseHelper(getContext());
         productArrayList = db.getAllProduct();
+        addNativeExpressAd();
         if(!productArrayList.isEmpty()){
             mAdapter = new ProductAdapter(getContext(), productArrayList);
             mRecyclerView.setHasFixedSize(true);
@@ -77,6 +80,19 @@ public class ProductListFragment extends Fragment implements MainActivity.ItemSc
         else{
             emptyLayout.setVisibility(View.VISIBLE);
             swipeRefresh.setRefreshing(false);
+        }
+
+    }
+
+    private void addNativeExpressAd() {
+        /** Setting adViewItem dynamically into the **/
+        for(int i=0 ; i<productArrayList.size(); i+=4){
+
+                final  NativeExpressAdView adView = new NativeExpressAdView(getActivity());
+                adView.setAdUnitId(getContext().getResources().getString(R.string.ad_unit_id));
+                adView.setAdSize(new AdSize(320 , 150));
+                adView.loadAd(new AdRequest.Builder().build());
+                productArrayList.add(i , adView);
         }
 
     }
