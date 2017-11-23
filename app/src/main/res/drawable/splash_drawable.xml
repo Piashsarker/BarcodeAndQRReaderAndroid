@@ -7,7 +7,7 @@
     <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/barcode_logo"/>
+            android:src="@drawable/barcode_icon_2"/>
 
     </item>
 

@@ -4,7 +4,8 @@
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.nextinnovation.pt.barcodereaderforplaystore.com.example.pt.barcodescanner.SplashActivity">
+    tools:context=".activity.SplashActivity">
+
 
 
 </RelativeLayout>
