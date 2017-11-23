@@ -16,6 +16,8 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.nextinnovation.pt.barcodescanner.R;
 
+import java.net.URI;
+
 public class WebViewActivity extends AppCompatActivity {
     Button btnRetry ;
     String barCode = "" ;
@@ -55,7 +57,13 @@ public class WebViewActivity extends AppCompatActivity {
             WebView myWebView = (WebView)findViewById(R.id.google_webview);
             myWebView.setWebViewClient(new WebViewClient());
             myWebView.getSettings().setJavaScriptEnabled(true);
-            myWebView.loadUrl("https://www.google.com/search?q="+barCode);
+
+            if(isValidURL(barCode)){
+                myWebView.loadUrl(barCode);
+            }else{
+                myWebView.loadUrl("https://www.google.com/search?q="+barCode);
+            }
+
         }
         else{
             btnRetry.setVisibility(View.VISIBLE);
@@ -65,11 +73,20 @@ public class WebViewActivity extends AppCompatActivity {
 
 
     }
-    public static boolean isNetworkAvailable(Context context) {
+    public  boolean isNetworkAvailable(Context context) {
 
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
+
+    public  boolean isValidURL(String urlStr) {
+        try {
+            URI uri = new URI(urlStr);
+            return uri.getScheme().equals("http") || uri.getScheme().equals("https");
+        } catch (Exception e) {
+            return false;
+        }
     }
 
 
