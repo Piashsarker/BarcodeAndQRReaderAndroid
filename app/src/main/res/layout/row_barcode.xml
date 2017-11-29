@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    android:layout_height="wrap_content">
+    <android.support.v7.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        app:cardBackgroundColor="#FAF8F5"
+        app:cardCornerRadius="3dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="match_parent">
+
+          <LinearLayout
+              android:layout_width="0dp"
+              android:layout_height="match_parent"
+              android:background="#F1C40F"
+              android:id="@+id/layout_right_buttons"
+              android:orientation="vertical"
+              android:layout_weight="1">
+
+              <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  android:id="@+id/layout_copy"
+                  android:layout_weight="1">
+
+                  <ImageView
+                      android:layout_width="30dp"
+                      android:layout_centerInParent="true"
+                      android:src="@drawable/ic_content_copy_white_24dp"
+                      android:layout_height="30dp" />
+
+              </RelativeLayout>
+
+              <View
+                  android:layout_width="match_parent"
+                  android:background="#FFF"
+                  android:layout_marginRight="5dp"
+                  android:layout_marginLeft="5dp"
+                  android:layout_height="1dp">
+
+              </View>
+
+              <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="0dp"
+                  android:id="@+id/layout_search"
+                  android:layout_weight="1">
+
+                  <ImageView
+                      android:layout_width="30dp"
+                      android:layout_centerInParent="true"
+                      android:src="@drawable/ic_search_white_24dp"
+                      android:layout_height="30dp" />
+
+              </RelativeLayout>
+
+
+          </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="10dp"
+                android:orientation="vertical"
+                android:layout_weight="6">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8pt"
+                        android:textColor="@color/black"
+                        android:text="@string/scan_no"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="8pt"
+                        android:id="@+id/txt_scan_no"
+                        android:textColor="@color/black"
+                        android:text="@string/number"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="5dp"
+                    android:orientation="horizontal">
+
+                  <LinearLayout
+                      android:layout_width="0dp"
+                      android:layout_height="match_parent"
+                      android:orientation="vertical"
+                      android:layout_weight="3">
+                     <ImageView
+                         android:layout_width="match_parent"
+                         android:layout_height="40dp"
+                         android:src="@drawable/ic_barcode"
+                         android:scaleType="fitXY"
+                         />
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_gravity="center"
+                          android:textSize="6pt"
+                          android:id="@+id/txt_scan_result"
+                          android:textColor="@color/black"
+                          android:text="@string/sample_code"/>
+
+
+
+                  </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:layout_weight="4">
+
+                      <LinearLayout
+                          android:layout_width="match_parent"
+                          android:layout_height="wrap_content"
+                          android:layout_marginTop="3dp"
+                          android:layout_marginLeft="5dp"
+                          android:orientation="horizontal">
+                          <ImageView
+                              android:layout_width="wrap_content"
+                              android:layout_height="wrap_content"
+                              android:src="@drawable/ic_access_time_black_24dp"
+                              />
+                          <TextView
+                              android:layout_width="wrap_content"
+                              android:text="@string/date_example"
+                              android:textSize="6pt"
+                              android:id="@+id/txt_date_time"
+                              android:textColor="@color/black"
+                              android:layout_gravity="center"
+                              android:layout_height="wrap_content" />
+                      </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_marginLeft="5dp"
+                            android:layout_height="match_parent">
+                          <Button
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:layout_margin="5dp"
+                              android:id="@+id/btn_share"
+                              android:textColor="#FFF"
+                              android:text="@string/share"
+                              android:drawableLeft="@drawable/ic_share_black_24dp"
+                              android:background="@drawable/button_background"
+                              />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </android.support.v7.widget.CardView>
+
+
+</LinearLayout>

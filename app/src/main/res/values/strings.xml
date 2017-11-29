@@ -29,4 +29,8 @@
     <string name="swipe">Swipe Down To Refresh</string>
     <string name="app_ad_id">ca-app-pub-2932652588490084~5264077465</string>
     <string name="ad_unit_id">ca-app-pub-2932652588490084/2711610908</string>
+    <string name="scan_no">Scan No #</string>
+    <string name="number">1</string>
+    <string name="sample_code">123123123123221</string>
+    <string name="date_example">10 Nov 2017 12.12 AM</string>
 </resources>
