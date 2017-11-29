@@ -7,6 +7,9 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.android.gms.ads.NativeExpressAdView;
@@ -37,7 +40,7 @@ public class ProductAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         switch (viewType){
             case PRODUCT_ITEM_VIEW_TYPE :
             default:
-                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_product,parent,false);
+                View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_barcode,parent,false);
                 return new ProductViewHolder(view);
             case AD_VIEW_TYPE:
                 View nativeExpressLayoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_native_express_add, parent , false);
@@ -70,12 +73,20 @@ public class ProductAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     private void setProductView(ProductViewHolder holder, final  int position) {
-         final Product product = (Product)productArrayList.get(position);
-        holder.productId.setText(product.getProductBarcodeNo());
-        holder.currentTime.setText(product.getScanTime());
-        holder.currentDate.setText(product.getScanDate());
+        final Product product = (Product)productArrayList.get(position);
+        holder.txtScanResult.setText(product.getProductBarcodeNo());
+        holder.txtScanTime.setText(product.getScanDate()+" "+product.getScanTime());
+        holder.txtScanNo.setText(String.valueOf(position));
 
-        holder.search.setOnClickListener(new View.OnClickListener() {
+        if(position%2==0){
+            holder.layoutRightButtons.setBackgroundColor(context.getResources().getColor(R.color.card_right_blue));
+        }
+        if(position%3==0){
+            holder.layoutRightButtons.setBackgroundColor(context.getResources().getColor(R.color.card_right_purple));
+        }
+
+
+        holder.layoutSearch.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, WebViewActivity.class);
@@ -83,7 +94,7 @@ public class ProductAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                 context.startActivity(intent);
             }
         });
-        holder.copy.setOnClickListener(new View.OnClickListener() {
+        holder.layoutCopy.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ClipBoardManager clipBoardManager = new ClipBoardManager();
@@ -91,11 +102,27 @@ public class ProductAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
                 Snackbar.make(v,"Copied To Clipboard",Snackbar.LENGTH_SHORT).show();
             }
         });
+        holder.btnShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openShareDialog();
+            }
+        });
+    }
+
+    private void openShareDialog() {
+
     }
 
     @Override
     public int getItemViewType(int position) {
-        return (position % 4==0 )? AD_VIEW_TYPE : PRODUCT_ITEM_VIEW_TYPE ;
+        if((position%4 ==0) &&  productArrayList.get(position) instanceof NativeExpressAdView){
+            return  AD_VIEW_TYPE ;
+        }
+        else{
+            return  PRODUCT_ITEM_VIEW_TYPE;
+        }
+
     }
 
 
@@ -106,15 +133,20 @@ public class ProductAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     public class ProductViewHolder extends RecyclerView.ViewHolder {
-        TextView search, copy, currentDate, currentTime, productId;
+        private LinearLayout layoutRightButtons ;
+        private RelativeLayout layoutCopy , layoutSearch ;
+        private TextView txtScanResult , txtScanNo , txtScanTime ;
+        private Button btnShare ;
 
         public ProductViewHolder(View itemView) {
             super(itemView);
-            search = (TextView) itemView.findViewById(R.id.search);
-            copy = (TextView) itemView.findViewById(R.id.copy);
-            currentDate = (TextView) itemView.findViewById(R.id.current_date);
-            currentTime = (TextView) itemView.findViewById(R.id.current_time);
-            productId = (TextView) itemView.findViewById(R.id.product_code);
+        layoutRightButtons = itemView.findViewById(R.id.layout_right_buttons);
+        layoutCopy = itemView.findViewById(R.id.layout_copy);
+        layoutSearch = itemView.findViewById(R.id.layout_search);
+        txtScanNo = itemView.findViewById(R.id.txt_scan_no);
+        txtScanResult = itemView.findViewById(R.id.txt_scan_result);
+        txtScanTime = itemView.findViewById(R.id.txt_date_time);
+        btnShare = itemView.findViewById(R.id.btn_share);
 
         }
     }

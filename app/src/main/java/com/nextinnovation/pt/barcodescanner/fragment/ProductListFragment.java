@@ -19,6 +19,7 @@ import com.nextinnovation.pt.barcodescanner.R;
 import com.nextinnovation.pt.barcodescanner.activity.MainActivity;
 import com.nextinnovation.pt.barcodescanner.adapter.ProductAdapter;
 import com.nextinnovation.pt.barcodescanner.database.DatabaseHelper;
+import com.nextinnovation.pt.barcodescanner.utils.Utils;
 
 import java.util.ArrayList;
 
@@ -67,7 +68,10 @@ public class ProductListFragment extends Fragment implements MainActivity.ItemSc
     private void loadProductList() {
         db= new DatabaseHelper(getContext());
         productArrayList = db.getAllProduct();
-        addNativeExpressAd();
+        if(Utils.isNetworkAvailable(getContext())){
+            addNativeExpressAd();
+        }
+
         if(!productArrayList.isEmpty()){
             mAdapter = new ProductAdapter(getContext(), productArrayList);
             mRecyclerView.setHasFixedSize(true);
