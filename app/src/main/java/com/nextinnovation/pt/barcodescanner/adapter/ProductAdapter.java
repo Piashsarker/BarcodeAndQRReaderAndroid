@@ -105,13 +105,22 @@ public class ProductAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         holder.btnShare.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                openShareDialog();
+                openShareDialog(product.getProductBarcodeNo());
             }
         });
     }
 
-    private void openShareDialog() {
-
+    private void openShareDialog(String result) {
+        Intent sharingIntent = new Intent(android.content.Intent.ACTION_SEND);
+        String appLink = "https://play.google.com/store/apps/details?id="+context.getPackageName();
+        sharingIntent.setType("text/plain");
+        String shareBodyText = "Scan Result: "+ result+"."+
+                "\nCheck Out The Cool & Fastest Barcode Reader App \n " +
+                "Link: "+appLink +" \n" +
+                " #Barcode #Android";
+        sharingIntent.putExtra(android.content.Intent.EXTRA_SUBJECT,"Barcode Reader Android App");
+        sharingIntent.putExtra(android.content.Intent.EXTRA_TEXT, shareBodyText);
+        context.startActivity(Intent.createChooser(sharingIntent, "Share"));
     }
 
     @Override
