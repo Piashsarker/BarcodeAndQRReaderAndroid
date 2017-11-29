@@ -76,7 +76,7 @@ public class ProductAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         final Product product = (Product)productArrayList.get(position);
         holder.txtScanResult.setText(product.getProductBarcodeNo());
         holder.txtScanTime.setText(product.getScanDate()+" "+product.getScanTime());
-        holder.txtScanNo.setText(String.valueOf(position));
+        holder.txtScanNo.setText(String.valueOf(position+1));
 
         if(position%2==0){
             holder.layoutRightButtons.setBackgroundColor(context.getResources().getColor(R.color.card_right_blue));

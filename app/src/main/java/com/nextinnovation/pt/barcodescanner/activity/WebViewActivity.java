@@ -21,7 +21,7 @@ public class WebViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web_view);
-        btnRetry = (Button) findViewById(R.id.btnRetry);
+        btnRetry = findViewById(R.id.btnRetry);
         loadAdd();
 
         Intent intent = getIntent();
@@ -50,7 +50,7 @@ public class WebViewActivity extends AppCompatActivity {
     private void loadWebView(String barCode) {
         if(Utils.isNetworkAvailable(this)){
             btnRetry.setVisibility(View.INVISIBLE);
-            WebView myWebView = (WebView)findViewById(R.id.google_webview);
+            WebView myWebView = findViewById(R.id.google_webview);
             myWebView.setWebViewClient(new WebViewClient());
             myWebView.getSettings().setJavaScriptEnabled(true);
 

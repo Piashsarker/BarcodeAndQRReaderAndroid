@@ -48,8 +48,8 @@ public class ProductListFragment extends Fragment implements MainActivity.ItemSc
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view =  inflater.inflate(R.layout.fragment_prduct_list,container,false);
-        mRecyclerView = (RecyclerView) view.findViewById(R.id.product_list_recycler_view);
-        swipeRefresh = (SwipeRefreshLayout) view.findViewById(R.id.swipe_refresh_layout);
+        mRecyclerView = view.findViewById(R.id.product_list_recycler_view);
+        swipeRefresh = view.findViewById(R.id.swipe_refresh_layout);
         mainLayout = view.findViewById(R.id.main_layout);
         emptyLayout = view.findViewById(R.id.empty_layout);
         swipeRefresh.setColorSchemeColors(getResources().getColor(R.color.green),getResources().getColor(R.color.blue),getResources().getColor(R.color.orange));

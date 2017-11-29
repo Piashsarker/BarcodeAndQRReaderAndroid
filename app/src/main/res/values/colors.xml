@@ -9,8 +9,6 @@
     <color name="blue">#000099</color>
     <color name="black">#000</color>
 
-    <color name="card_background">#c290807c</color>
     <color name="card_right_blue">#1ABC9C</color>
     <color name="card_right_purple">#9B59B6</color>
-    <color name="button_share_back">#FF8352</color>
 </resources>

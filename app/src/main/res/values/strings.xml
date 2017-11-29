@@ -8,8 +8,6 @@
     <string name="rate_app">Rate This App</string>
     <string name="bug">Submit Bug</string>
     <string name="license">License</string>
-    <string name="user_cancelled">User Cancel Permission</string>
-    <string name="banner_add_unit_id">ca-app-pub-1714609736931391/8247106060</string>
     <string name="license_title_company">Company Information</string>
     <string name="license_company">Next Innovation Soft</string>
     <string name="license_company_website">www.nextinnovationsoft.com</string>
@@ -20,11 +18,9 @@
     <string name="ok">Save</string>
     <string name="cancel">Cancel</string>
     <string name="ok_title">Ok</string>
-    <string name="empty_barcode">Scan your first Barcode or QR Code to see the list.</string>
     <string name="scan_your_first">Scan your first Barcode or QR Code to see the information here.</string>]
     <string name="camera_permission_granted">Camera Permission Granted.</string>
     <string name="camera_permission_request">Camera permission is required for Barcode Scanning.</string>
-    <string name="thanks_for_permission">Thanks for your permission.</string>
     <string name="sorry_for_not_permission">Sorry , We are not able to scan Barcode without your permission.</string>
     <string name="swipe">Swipe Down To Refresh</string>
     <string name="app_ad_id">ca-app-pub-2932652588490084~5264077465</string>

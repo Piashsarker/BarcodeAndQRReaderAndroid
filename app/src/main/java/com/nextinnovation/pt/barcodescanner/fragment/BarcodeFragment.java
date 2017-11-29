@@ -44,7 +44,7 @@ public class BarcodeFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        btnScan = (Button) view.findViewById(R.id.btnScan);
+        btnScan = view.findViewById(R.id.btnScan);
         btnScan.setOnClickListener(this);
         loadAdd(view);
 
