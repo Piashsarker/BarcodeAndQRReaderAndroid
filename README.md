@@ -1,6 +1,6 @@
 # BarcodeAndQRReaderAndroid
 ## Best Barcode And QR Code Reder for Android . ## 
-
+### Google Play - https://play.google.com/store/apps/details?id=com.nextinnovation.pt.barcodescanner 
 #### Android Fastest Barcode & QR Code Reader is the best tool for scanning Barcode & QR code instantly within 2-5 Seconds. Below are some features of this app ####
  
 1. Scan QR Code faster than other tool. 
