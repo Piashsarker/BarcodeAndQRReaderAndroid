@@ -13,13 +13,13 @@ android {
         applicationId "com.nextinnovation.pt.barcodescanner"
         minSdkVersion 15
         targetSdkVersion 26
-        versionCode 2
-        versionName "2.0"
+        versionCode 3
+        versionName "2.1"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }

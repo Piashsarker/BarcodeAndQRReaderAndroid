@@ -23,7 +23,6 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Toast;
 
 import com.edwardvanraak.materialbarcodescanner.MaterialBarcodeScanner;
@@ -101,7 +100,6 @@ public class MainActivity extends AppCompatActivity implements BarcodeFragment.S
     public void scanBarcode() {
         /** This method will listen the button clicked passed form the fragment **/
          checkPermission();
-        Toast.makeText(context, "Starting Scan.", Toast.LENGTH_SHORT).show();
     }
 
     class ViewPagerAdapter extends FragmentPagerAdapter {
@@ -258,15 +256,10 @@ public class MainActivity extends AppCompatActivity implements BarcodeFragment.S
 
     private void requestCameraPermission() {
         if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA)) {
-            Snackbar.make(findViewById(android.R.id.content), getResources().getString(R.string.camera_permission_request),
-                    Snackbar.LENGTH_INDEFINITE).setAction("OK", new View.OnClickListener() {
-                @Override public void onClick(View view) {
+
                     ActivityCompat.requestPermissions(MainActivity.this,  new String[] {Manifest.permission.CAMERA}, MY_PERMISSION_REQUEST_CAMERA);
-                }
-            }).show();
+
         } else{
-            Snackbar.make(findViewById(android.R.id.content), getResources().getString(R.string.camera_permission_request),
-                    Snackbar.LENGTH_SHORT).show();
             ActivityCompat.requestPermissions(MainActivity.this,new String[] {Manifest.permission.CAMERA}, MY_PERMISSION_REQUEST_CAMERA);
         }
     }
