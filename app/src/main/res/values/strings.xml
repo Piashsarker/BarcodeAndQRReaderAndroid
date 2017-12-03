@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Barcode Reader</string>
+
     <string name="dialog_title_licenses">License</string>
     <string name="license_title_developer">Piash Sarker</string>
     <string name="license_developer_email">sarkerpt@gmail.com</string>
@@ -29,4 +29,5 @@
     <string name="number">1</string>
     <string name="sample_code">123123123123221</string>
     <string name="date_example">10 Nov 2017 12.12 AM</string>
+    <string name="app_name"><![CDATA[Fastest Barcode & QR Code Scanner]]></string>
 </resources>
