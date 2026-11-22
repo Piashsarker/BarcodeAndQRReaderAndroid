@@ -2,17 +2,17 @@ package com.nextinnovation.pt.barcodescanner.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 import android.widget.Button;
 import android.widget.Toast;
-
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
+import androidx.appcompat.app.AppCompatActivity;
 import com.nextinnovation.pt.barcodescanner.R;
 import com.nextinnovation.pt.barcodescanner.utils.Utils;
+
+//import com.google.android.gms.ads.AdRequest;
+//import com.google.android.gms.ads.AdView;
 
 public class WebViewActivity extends AppCompatActivity {
     Button btnRetry ;
@@ -40,9 +40,9 @@ public class WebViewActivity extends AppCompatActivity {
     }
 
     private void loadAdd() {
-         AdView mAdView = findViewById(R.id.adView);
+      /*   AdView mAdView = findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
+        mAdView.loadAd(adRequest);*/
 
     }
 

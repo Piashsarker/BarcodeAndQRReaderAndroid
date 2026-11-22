@@ -2,8 +2,6 @@ package com.nextinnovation.pt.barcodescanner.adapter;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.design.widget.Snackbar;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,8 +9,9 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-
+import androidx.recyclerview.widget.RecyclerView;
 import com.google.android.gms.ads.NativeExpressAdView;
+import com.google.android.material.snackbar.Snackbar;
 import com.nextinnovation.pt.barcodescanner.R;
 import com.nextinnovation.pt.barcodescanner.activity.WebViewActivity;
 import com.nextinnovation.pt.barcodescanner.model.Product;
