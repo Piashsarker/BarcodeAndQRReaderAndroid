@@ -14,13 +14,6 @@
 9. Supports 1D barcodes: EAN-13, EAN-8, UPC-A, UPC-E, Code-39, Code-93, Code-128, ITF, Codabar
 10. Supports 2D barcodes: QR Code, Data Matrix, PDF-417, Aztec
 
-<img src="https://github.com/Piashsarker/BarcodeAndQRReaderAndroid/blob/master/google_play_screenshots/home_screen.png" height="600" width="350">
-<img src="https://github.com/Piashsarker/BarcodeAndQRReaderAndroid/blob/master/google_play_screenshots/scan_screen.png" height="600" width="350">
-<img src="https://github.com/Piashsarker/BarcodeAndQRReaderAndroid/blob/master/google_play_screenshots/scan_result_screen.png" height="600" width="350">
-<img src="https://github.com/Piashsarker/BarcodeAndQRReaderAndroid/blob/master/google_play_screenshots/copy_share_search.png" height="600" width="350">
-<img src="https://github.com/Piashsarker/BarcodeAndQRReaderAndroid/blob/master/google_play_screenshots/web_search.png" height="600" width="350">
-
-
 
 ### For developer preview Fastest Barcode & QR Code Reader covered different Android Topics & Library. ###
 
@@ -61,13 +54,4 @@ Fabric : https://fabric.io/
 
 ### Follow Me : ### 
 
-Github :  https://github.com/Piashsarker 
-
-Linkedin : https://www.linkedin.com/in/piashsarker/
-
-Quora : https://www.quora.com/profile/Piash-Sarker-1
-
-Twitter : https://twitter.com/PiashSarker 
-
-Gmail : sarkerpt@gmail.com 
 

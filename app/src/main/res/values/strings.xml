@@ -1,9 +1,9 @@
 <resources>
 
     <string name="dialog_title_licenses">License</string>
-    <string name="license_title_developer">Piash Sarker</string>
-    <string name="license_developer_email">sarkerpt@gmail.com</string>
-    <string name="license_developer_phone">+8801683193505</string>
+    <string name="license_title_developer">PS</string>
+    <string name="license_developer_email">abc@gmail.com</string>
+    <string name="license_developer_phone">+8801683....</string>
     <string name="share">Share</string>
     <string name="rate_app">Rate This App</string>
     <string name="bug">Submit Bug</string>

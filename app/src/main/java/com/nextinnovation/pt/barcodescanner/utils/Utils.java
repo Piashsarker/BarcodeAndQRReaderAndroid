@@ -7,7 +7,7 @@ import android.net.NetworkInfo;
 import java.net.URI;
 
 /**
- * Created by piashsarker on 11/29/17.
+ * Created by ps on 11/29/17.
  */
 
 public class Utils {
