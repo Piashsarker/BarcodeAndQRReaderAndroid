@@ -16,8 +16,6 @@ public class SplashActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        /** Initialize Fabrice **/
-        Fabric.with(SplashActivity.this ,  new Crashlytics());
         /** Initialize Firebase Ads **/
         MobileAds.initialize(this, getResources().getString(R.string.app_ad_id));
         startMainActivity();
