@@ -161,7 +161,7 @@ public class MainActivity extends AppCompatActivity implements BarcodeFragment.S
     }
 
     private void openSubmitBug() {
-        String to = "sarkerpt@gmail.com";
+        String to = "spt@gmail.com";
         String subject = "Barcode Reader For Android - Bug Report";
 
         Intent email = new Intent(Intent.ACTION_SEND);
