@@ -2,21 +2,16 @@ package com.nextinnovation.pt.barcodescanner.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v4.widget.SwipeRefreshLayout;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RelativeLayout;
-
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdSize;
-import com.google.android.gms.ads.NativeExpressAdView;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 import com.nextinnovation.pt.barcodescanner.R;
-import com.nextinnovation.pt.barcodescanner.activity.MainActivity;
 import com.nextinnovation.pt.barcodescanner.adapter.ProductAdapter;
 import com.nextinnovation.pt.barcodescanner.database.DatabaseHelper;
 import com.nextinnovation.pt.barcodescanner.utils.Utils;
@@ -27,7 +22,7 @@ import java.util.ArrayList;
  * Created by PT on 2/9/2017.
  */
 
-public class ProductListFragment extends Fragment implements MainActivity.ItemScanned {
+public class ProductListFragment extends Fragment  {
 
     private RecyclerView mRecyclerView;
     private ProductAdapter mAdapter;
@@ -90,14 +85,14 @@ public class ProductListFragment extends Fragment implements MainActivity.ItemSc
 
     private void addNativeExpressAd() {
         /** Setting adViewItem dynamically into the **/
-        for(int i=0 ; i<productArrayList.size(); i+=4){
+       /* for(int i=0 ; i<productArrayList.size(); i+=4){
 
                 final  NativeExpressAdView adView = new NativeExpressAdView(getActivity());
                 adView.setAdUnitId(getContext().getResources().getString(R.string.ad_unit_id));
                 adView.setAdSize(new AdSize(320 , 150));
                 adView.loadAd(new AdRequest.Builder().build());
                 productArrayList.add(i , adView);
-        }
+        }*/
 
     }
 
@@ -106,8 +101,4 @@ public class ProductListFragment extends Fragment implements MainActivity.ItemSc
         loadProductList();
     }
 
-    @Override
-    public void itemUpdated() {
-        loadProductList();
-    }
 }

@@ -46,9 +46,9 @@ GitHub : https://github.com/EdwardvanRaak/MaterialBarcodeScanner
 
 Dependecies :
 
-`compile 'com.google.firebase:firebase-core:11.6.0'`
+`implementation 'com.google.firebase:firebase-core:11.6.0'`
 
-`compile 'com.google.firebase:firebase-ads:11.6.0'`
+`implementation 'com.google.firebase:firebase-ads:11.6.0'`
 
 Firebase : https://firebase.google.com/
 

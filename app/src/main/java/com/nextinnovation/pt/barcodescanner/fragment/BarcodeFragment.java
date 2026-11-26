@@ -2,15 +2,12 @@ package com.nextinnovation.pt.barcodescanner.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
+import androidx.annotation.Nullable;
+import androidx.fragment.app.Fragment;
 import com.nextinnovation.pt.barcodescanner.R;
 
 /**
@@ -51,10 +48,9 @@ public class BarcodeFragment extends Fragment implements View.OnClickListener {
     }
 
     private void loadAdd(View view) {
-        AdView mAdView = view.findViewById(R.id.adView);
+     /*   AdView mAdView = view.findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
-
+        mAdView.loadAd(adRequest);*/
     }
     @Override
     public void onAttach(Context context) {
